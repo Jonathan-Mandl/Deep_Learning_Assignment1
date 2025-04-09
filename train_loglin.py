@@ -99,11 +99,11 @@ if __name__ == "__main__":
     # write code to load the train and dev sets, set up whatever you need,
     # and call train_classifier.
 
-    #train_data = [(l,text_to_bigrams(t)) for l,t in read_data("data/train")]
-    train_data = [(l, list(t)) for l, t in read_data("data/train")] #unigram
+    train_data = [(l,text_to_bigrams(t)) for l,t in read_data("data/train")]
+    #train_data = [(l, list(t)) for l, t in read_data("data/train")] #unigram
 
-    #dev_data   = [(l,text_to_bigrams(t)) for l,t in read_data("data/dev")]
-    dev_data = [(l, list(t)) for l, t in read_data("data/dev")] #unigram
+    dev_data   = [(l,text_to_bigrams(t)) for l,t in read_data("data/dev")]
+    #dev_data = [(l, list(t)) for l, t in read_data("data/dev")] #unigram
     fc = Counter()
     for l,feats in train_data:
         fc.update(feats)
