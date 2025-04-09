@@ -5,7 +5,7 @@ import numpy as np
 from collections import Counter
 
 STUDENTS = [
-    {"name": "YOUR NAME", "ID": "YOUR ID NUMBER"},
+    {"name": "Danielle Hodaya Shrem", "ID": "208150433"},
     {"name": "YOUR NAME", "ID": "YOUR ID NUMBER"},
 ]
 
@@ -92,8 +92,11 @@ if __name__ == "__main__":
     # write code to load the train and dev sets, set up whatever you need,
     # and call train_classifier.
 
-    train_data = [(l,text_to_bigrams(t)) for l,t in read_data("data/train")]
-    dev_data   = [(l,text_to_bigrams(t)) for l,t in read_data("data/dev")]
+    #train_data = [(l,text_to_bigrams(t)) for l,t in read_data("data/train")]
+    train_data = [(l, list(t)) for l, t in read_data("data/train")]  # unigram
+
+    #dev_data   = [(l,text_to_bigrams(t)) for l,t in read_data("data/dev")]
+    dev_data = [(l, list(t)) for l, t in read_data("data/dev")]  # unigram
 
     fc = Counter()
     for l,feats in train_data:
@@ -113,11 +116,9 @@ if __name__ == "__main__":
 
     out_dim = len(L2I)
 
-    num_iterations = 20
+    num_iterations = 10
     
     learning_rate = 0.001
-
-    # ...
 
     params = mlp.create_classifier(in_dim,hidden_dim, out_dim)
     trained_params = train_classifier(

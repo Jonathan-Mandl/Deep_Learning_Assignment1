@@ -1,7 +1,7 @@
 import numpy as np
 
 STUDENTS = [
-    {"name": "YOUR NAME", "ID": "YOUR ID NUMBER"},
+    {"name": "Danielle Hodaya Shrem", "ID": "208150433"},
     {"name": "YOUR NAME", "ID": "YOUR ID NUMBER"},
 ]
 

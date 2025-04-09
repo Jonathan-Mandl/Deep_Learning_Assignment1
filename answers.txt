@@ -1,0 +1,14 @@
+1. Can you get better accuracies on the language identification task using the multi-layer perceptron?
+
+Yes. With letter bigram features, the multi-layer perceptron (MLP) achieved a development accuracy of 85.33%, which is slightly lower but very close to the 85.33% achieved by the log-linear model. While the dev accuracies are similar, the MLP tends to converge faster and reaches a higher training accuracy, which suggests it fits the data better and might be further improved with tuning.
+
+2. Switch the feature set of the language identification from letter-bigrams to letter-unigrams (single letters). What’s the best you can do with the log-linear model with these features? What’s the best you can do with the MLP?
+
+Using letter unigrams instead of bigrams resulted in a decrease in performance for both models:
+- The log-linear model reached a dev accuracy of 68.33%.
+- The MLP achieved a slightly lower dev accuracy of 68.0%.
+This is expected, as unigrams contain less contextual information than bigrams, making the classification task harder.
+
+3. Verify that your MLP can learn the XOR function (you can see a training set for XOR in the file xor_data.py). How many iterations does it take to correctly solve xor?
+
+Yes. The MLP successfully learned the XOR function. Using a hidden layer with 10 units and a learning rate of 1.0, it reached 100% training accuracy after 46 iterations.

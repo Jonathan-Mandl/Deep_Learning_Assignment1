@@ -2,7 +2,7 @@ import numpy as np
 from grad_check import gradient_check
 
 STUDENTS = [
-    {"name": "YOUR NAME", "ID": "YOUR ID NUMBER"},
+    {"name": "Danielle Hodaya Shrem", "ID": "208150433"},
     {"name": "YOUR NAME", "ID": "YOUR ID NUMBER"},
 ]
 
