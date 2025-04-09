@@ -3,7 +3,7 @@ from grad_check import gradient_check
 from loglinear import softmax
 STUDENTS = [
     {"name": "Danielle Hodaya Shrem", "ID": "208150433"},
-    {"name": "YOUR NAME", "ID": "YOUR ID NUMBER"},
+    {"name": "Jonathan Mandl", "ID": "211399175"},
 ]
 
 
